@@ -20,7 +20,7 @@ class MoneycppConan(ConanFile):
 
     def package(self):
         version = versions[self.version]
-        self.copy("*.h", src='moneycpp-{}/include'.format(version.commit), dst="include")
+        self.copy("*.h", src='moneycpp-{}/include'.format(version.commit), dst="include/moneycpp")
 
     def package_id(self):
         self.info.header_only()
